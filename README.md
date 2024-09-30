@@ -22,7 +22,7 @@ As we point out in the database website, the anndatas all clustered multiple lei
 To install this package, make sure you have Python installed (preferably Python 3.7 or later). You can install the package via pip:
 
 ```bash
-pip install your-package-name
+pip install process-hdst
 ```
 
 Replace `your-package-name` with the actual name of your package on PyPI.
@@ -36,7 +36,7 @@ This package provides a command line interface (CLI) for easy execution of prepr
 To run the preprocessing, use the following command structure:
 
 ```bash
-python -m your_package.cli <adata_path> <work_path> [options]
+process-hdst <adata_path> <work_path> [options]
 ```
 
 - **`adata_path`**: The file path to your anndata object (e.g., `data/adata.h5ad`).
@@ -73,7 +73,7 @@ python -m your_package.cli <adata_path> <work_path> [options]
 If you want to perform all available preprocessing steps on an anndata object located at `data/adata.h5ad` and save the results to a directory named `results` inside `output`, use the following command:
 
 ```bash
-python -m your_package.cli data/adata.h5ad output --all
+process-hdst data/adata.h5ad output --all
 ```
 
 This will sequentially perform quality control, Leiden clustering, and all analysis steps, saving the results in `output/results`.
@@ -83,7 +83,7 @@ This will sequentially perform quality control, Leiden clustering, and all analy
 If you're interested in performing only specific steps, such as quality control and Leiden clustering with a specific resolution, you can specify these options separately:
 
 ```bash
-python -m your_package.cli data/adata.h5ad output --qc --leiden --leiden_resolution 0.5
+process-hdst data/adata.h5ad output --qc --leiden --leiden_resolution 0.5
 ```
 
 This command will conduct quality control and then apply Leiden clustering with a resolution of 0.5, saving the intermediate and final results in the specified output directory.
@@ -93,7 +93,7 @@ This command will conduct quality control and then apply Leiden clustering with 
 To perform further analysis after Leiden clustering, ensure you specify the Leiden key:
 
 ```bash
-python -m your_package.cli data/adata.h5ad output --after_leiden --leiden_key my_leiden_key
+process-hdst data/adata.h5ad output --after_leiden --leiden_key my_leiden_key
 ```
 
 Here, replace `my_leiden_key` with the actual key used for Leiden clustering in your dataset.
