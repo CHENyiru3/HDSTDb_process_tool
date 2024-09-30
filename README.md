@@ -1,7 +1,7 @@
 ![GitHub License](https://img.shields.io/github/license/chenyiru3/simple-pyper)
 ![PyPI - Version](https://img.shields.io/pypi/v/process-hdst?style=flat-square)
 
-# HDSTDb Spatial Transcriptomics Data Preprocessing
+# HDSTDb Spatial Transcriptomics Data Processing
 
 Welcome to the Spatial Transcriptomics Data Preprocessing package for data downloaded from HDSTDb. This tool is designed to facilitate the processing of spatial transcriptomics data using anndata objects, especially anndata from our database, HDSTDb. It offers a comprehensive pipeline for quality control, clustering, and analysis of highly variable genes, co-occurrence, and neighborhood enrichment.
 
